@@ -2,7 +2,7 @@ import { run, withTrace } from '@openai/agents';
 import { createSupervisor } from './supervisor.js';
 import { pathToFileURL } from 'node:url';
 
-const TEST_Q = 'Tin tức mới về thị trường Bitcoin 24h qua';
+const TEST_Q = 'Kinh tế VN Quý 2 có gì đáng chú ý?';
 
 export async function main() {
   const { supervisor, closeMcp } = await createSupervisor();

@@ -29,6 +29,10 @@ export async function createSearchAgentWithBraveMCP(): Promise<BraveMcpBundle> {
   const INSTRUCTIONS = `You are a research assistant. Given a search term, you search the web for that term and 
 produce a concise summary of the results. The summary must be 2–3 paragraphs and <300 words.
 Capture main points; fragments are fine; no extra commentary. Focus on essence, ignore fluff.
+
+Take time to make multiple searches to get a comprehensive overview, and then summarize your findings.
+If the web search tool raises an error due to rate limits, then use your other tool that fetches web pages instead.
+
 The current datetime is ${new Date().toISOString()}.`;
 
   // Agent tìm kiếm: có webSearchTool + Brave MCP
